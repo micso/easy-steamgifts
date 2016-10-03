@@ -103,7 +103,7 @@ function getLocalStorage() {
 }
 
 function sgRun() {
-    sg.addNews('Hello Easy SteamGift users :)');
+    sg.addNews('Easy SteamGifts bugs now can be reported using github !');
     sg.refreshStorage();
     sg.getGiveaways();
     getDlcList();
