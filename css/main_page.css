@@ -1,0 +1,148 @@
+/* v2 */
+
+#esg-news {border: 1px solid #d2d6e0;
+    background-color: #e8eaef;
+    border-radius: 4px;
+    margin-bottom: 13px;
+    padding: 10px 13px;
+    font: 700 16px "Open Sans",sans-serif;
+    color: #ab100e;}
+
+.global__image-outer-wrap--game-medium { position: relative; }
+
+div.esg-win-chance {
+    font-weight: bold;
+    border-color: #d9eaca #c3daac #aac68e #c2dca9 !important;
+    color: #719a47 !important;
+    background-image: linear-gradient(#f0f5eb 0%, #dfe5d8 100%) !important;
+    background-image: -moz-linear-gradient(#f0f5eb 0%, #dfe5d8 100%) !important;
+    background-image: -webkit-linear-gradient(#f0f5eb 0%, #dfe5d8 100%) !important;}
+
+.esg-bl-link {
+    font-weight: bold;
+    border-color: #eae8e9 #d9d5da #c6c2c3 #dadcdc !important;
+    color: #6b7a8c !important;
+    box-shadow: none !important;
+    /*text-shadow: 1px 1px rgba(84, 96, 107, 0.94);*/
+    background-image: linear-gradient(#f4f6fb 0px, #eff1f6 8px, #dcdee3 100%) !important;
+    /*background-image: -moz-linear-gradient(#8a92a1 0px, #757e8f 8px, #4e5666 100%) !important;*/
+    /*background-image: -webkit-linear-gradient(#8a92a1 0px, #757e8f 8px, #4e5666 100%) !important;*/
+    }
+
+.esg-join a {
+    background-image: -webkit-linear-gradient(top, rgb(202, 238, 167) 0%, rgb(180, 223, 138) 50%, rgb(154, 201, 106) 100%);
+    border-bottom-color: rgb(115, 164, 66);
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-image-outset: 0px;
+    border-image-repeat: stretch;
+    border-image-slice: 100%;
+    border-image-source: none;
+    border-image-width: 1;
+    border-left-color: rgb(160, 200, 112);
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-color: rgb(150, 188, 105);
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-top-color: rgb(185, 211, 147);
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-top-style: solid;
+    border-top-width: 1px;
+    color: rgba(63, 115, 0, 0.952941);
+    cursor: pointer;
+    display: block;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    font-stretch: normal;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: bold;
+    height: 32px;
+    line-height: 32px;
+    margin-bottom: 0px;
+    margin-left: 5px;
+    margin-right: 0px;
+    margin-top: 0px;
+    outline-color: rgba(63, 115, 0, 0.952941);
+    outline-style: none;
+    outline-width: 0px;
+    padding-bottom: 0px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 0px;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: rgba(224, 246, 198, 0.498039) 1px 1px 1px;
+    vertical-align: baseline;
+
+    position: absolute;
+    left: 160px;
+    top: -8px;
+}
+
+.esg-donator { font-weight: bold; color: #ab100e !important; text-decoration: none; font-size: 16px; border: 0; }
+
+.bl .esg-bl-link { opacity: 0.75; }
+.bl .esg-join { display: none; }
+.bl .giveaway__summary a, .bl .giveaway__summary div, .bl .giveaway__summary span { color: #c9cdcf !important; }
+
+/* v1 */
+
+.bl .title a { text-decoration: line-through; }
+
+.post .left .title { position: relative; }
+.post .right { position: relative; }
+
+.chance {
+    color: #636E75;
+    position: absolute;
+    left: -70px;
+    display: inline;
+    background-color: #F2F2F2;
+    border: 1px solid #e4e4e4;
+    font-size: 15px;
+    -moz-border-radius: 15px 15px 15px 15px;
+    border-radius: 15px 15px 15px 15px;
+    padding: 5px 5px 5px 5px;
+}
+
+.esg-on-wishlist { background-color: #D4EAFF; }
+
+#floating-info {
+    display: none;
+    color: #636E75;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    font-weight: bold;
+    width: 160px;
+    margin: 10px 10px;
+    background-color: #F2F2F2;
+    border: 1px solid #e4e4e4;
+    font-size: 15px;
+    -moz-border-radius: 15px 15px 15px 15px;
+    border-radius: 15px 15px 15px 15px;
+    padding: 5px 15px 5px 15px;
+}
+
+#new-page-loader {
+    text-align: center;
+    width: 100%;
+    margin: 20px 0;
+}
+
+#new-page-loader span {
+    padding-top: 5px;
+    color: #636E75;
+}
+
+/*#esg-news { text-align: center; margin-bottom: 10px; background-image: url(../img/light_grey_gradient.png); background-color: #f9f9fb; background-repeat: repeat-x; background-position: center top; color: #636E75; border: 1px solid #d3d3d3; border-radius: 5px; font-size: 16px; font-weight: bold; border-radius: 5px; padding: 10px 10px; }*/
+/*#esg-news-label { color: #aaaaaa; }*/
+/*#esg-news a { color: #347DB5; }*/
+/*#esg-news .esg-donator { font-weight: bold; color: #ab100e !important; text-decoration: none; }*/
+/*#esg-news .esg-donator img { height: 14px; }*/
+.esg-steam-store-link { margin-right: 10px; }

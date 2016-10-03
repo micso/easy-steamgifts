@@ -1,0 +1,74 @@
+body, .s2k-shortcut-table { font-family: Arial, san-serif; font-size: 12px; }
+ul { list-style: none; margin: 0; padding: 0; }
+a { color: #004b91; text-decoration: none; }
+a:hover { color: #e47911; text-decoration: underline; }
+input[type=text], input[type=number] { width: 45px; padding: 1px 1px; }
+input[type=text].long { width: 200px; }
+li.disabled label { text-decoration: line-through; }
+
+#content { width: 940px; margin: 0 auto; }
+#wishlist_refresh a, #profile_refresh a, #blacklist_refresh a { text-decoration: underline; }
+#blacklist-helper textarea { width: 100%; height: 75px; }
+#blacklist-helper button { margin-top: 15px; }
+
+.content-column { width: 470px; float: left; }
+.setup-clear-button { position: absolute; top: 0;  right: 0;  text-transform: uppercase; font-weight: bold; }
+.setup-box { width: 400px; margin: 20px 10px; float: left; padding: 20px; border: 1px solid #cdcdcd; border-radius: 5px }
+.setup-section { position: relative; }
+.setup-section-detail { margin-top: 25px; }
+.setup-section-header h1 { font-size: 18px; margin: 0; color: #1059A0 }
+.setup-section-header > h1 > span { font-size: 11px; }
+
+.list { color: #424242; }
+.list-header { border-bottom: 1px solid #cdcdcd; text-transform: uppercase; color: #848484; text-align: right; display: block; font-size: 14px; padding: 2px 0; font-weight: bold; }
+.item { width: 100%;  float: left; margin: 8px 0; }
+.type-text .item-field, .type-select .item-field { padding-left: 5px; }
+.type-text .item-label, .type-select .item-label { margin-left: 25px; line-height: 25px; }
+.type-checkbox .item-field { width: 25px; }
+.item-field { float: left; }
+.item-label { float: left; font-weight: bold; }
+.item-comment { width: 100%; float: left; padding-left: 25px; font-style: italic; font-size: 11px; }
+
+.switch-button-label {
+    float: left;
+    font-size: 10pt;
+    cursor: pointer;
+}
+
+.switch-button-label.off {
+    color: #adadad;
+}
+
+.switch-button-label.on {
+    color: #0088CC;
+}
+
+.switch-button-background {
+    float: left;
+    position: relative;
+
+    background: #ccc;
+    border: 1px solid #aaa;
+
+    margin: 1px 10px;
+
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+
+    cursor: pointer;
+}
+
+.switch-button-button {
+    position: absolute;
+
+    left: -1px;
+    top : -1px;
+
+    background: #FAFAFA;
+    border: 1px solid #aaa;
+
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}

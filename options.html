@@ -1,0 +1,135 @@
+<html>
+<head>
+    <title>Options</title>
+    <link rel="stylesheet" type="text/css" href="css/options.css"/>
+</head>
+<body>
+<div id="content">
+    <div class="content-column">
+        <div class="setup-box">
+            <div class="setup-section">
+                <div class="setup-section-header">
+                    <h1>Options</h1>
+                    <div>Storage usage: sync <label id="storage-sync-size"></label> local <label id="storage-local-size"></label></div>
+                </div>
+                <div class="list-header">Main list</div>
+                <div class="list">
+                    <div class="item type-checkbox">
+                        <div class="item-field"><input id="hide_dlc" type="checkbox"></div>
+                        <div class="item-label">Hide dlc</div>
+                    </div>
+                    <div class="item type-checkbox">
+                        <div class="item-field"><input id="hide_high_level" type="checkbox"></div>
+                        <div class="item-label">Hide high level</div>
+                        <div class="item-comment">Hide giveaways with too high level value</div>
+                    </div>
+                    <div class="item type-text">
+                        <div class="item-label">Filter by points</div>
+                        <div class="item-field"><input id="filter_points" type="number"></div>
+                        <div class="item-comment">Hide giveways that have less than given points</div>
+                    </div>
+                    <div class="item type-checkbox">
+                        <div class="item-field"><input id="hide_blacklist" type="checkbox"></div>
+                        <div class="item-label">Hide blacklist</div>
+                        <div class="item-comment">Games from your blacklist will be hidden</div>
+                    </div>
+                    <div class="item type-checkbox">
+                        <div class="item-field"><input id="auto_pagination" type="checkbox"></div>
+                        <div class="item-label">Auto load</div>
+                        <div class="item-comment">Automatically load new pages</div>
+                    </div>
+                    <div class="item type-checkbox">
+                        <div class="item-field"><input id="forum_on_top" type="checkbox"></div>
+                        <div class="item-label">Discussion on top</div>
+                        <div class="item-comment">Discussion block displayed at the top of the list</div>
+                    </div>
+                </div>
+                <div class="list-header">Giveaway page</div>
+                <div class="list">
+                    <div class="item type-text">
+                        <div class="item-label">Comment</div>
+                        <div class="item-field"><input id="join_comment" type="text" class="long"></div>
+                        <div class="item-comment">Leave empty for no comment</div>
+                    </div>
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+        </div>
+        <div id="wishlist" class="setup-box">
+            <div class="setup-section">
+                <div class="setup-section-header">
+                    <h1>Steam wishlist <span></span></h1>
+            <span id="profile_refresh" style="display: none;">Open your <a
+                    href="https://www.steamgifts.com/user/YOUR_STEAM_GIFT_USER" target="_blank">Profile</a> and refresh this page after that.</span>
+            <span id="wishlist_refresh" style="display: none;">Visit your <a target="_blank"
+                                                                             href="http://steamcommunity.com/profiles/YOUR_STEAM_ID/wishlist">Wishlist</a> to sync. Click <a
+                    id="steam_id_reset">here</a> if link is wrong.</span>
+                </div>
+                <div class="setup-section-detail">
+                    <ul>
+                    </ul>
+                </div>
+                <div class="setup-clear-button"><a class="clear" name="wishlist">Clear</a></div>
+            </div>
+        </div>
+    </div>
+    <div class="content-column">
+        <div id="about" class="setup-box">
+            <div class="setup-section">
+                <div class="setup-section-header">
+                    <h1>About</h1>
+
+                    <div>Who am I ?</div>
+                </div>
+                <div class="setup-section-detail">
+
+            <span> I'm Steam user like You and I used a lot of free time to make and share my plugin. Don't worry, it will <span
+                    style="text-decoration: underline">always be free</span>.<br/><br/>Anyway if you feel that my work deserve for your gratitude....</span><br/><br/>
+
+                    <form style="text-align: center;" action="https://www.paypal.com/cgi-bin/webscr" method="post"
+                          target="_top">
+                        <input type="hidden" name="cmd" value="_s-xclick">
+                        <input type="hidden" name="hosted_button_id" value="RYFSY6BBZ5NGL">
+                        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0"
+                               name="submit" alt="PayPal - The safer, easier way to pay online!">
+                        <img alt="" border="0" src="https://www.paypalobjects.com/pl_PL/i/scr/pixel.gif" width="1"
+                             height="1">
+                    </form>
+                    <span style="display: block; text-align: right; margin-bottom: 2px; font-size: 10px;">MeDAN</span>
+                </div>
+            </div>
+        </div>
+        <div id="blacklist-helper" class="setup-box">
+            <div class="setup-section">
+                <div class="setup-section-header">
+                    <h1>Blacklist manager<span></span></h1>
+                    <span>Copy & save exported content in text file.</span>
+                </div>
+                <div class="setup-section-detail">
+                    <textarea id="blacklist-textarea"></textarea>
+                    <button id="blacklist-export">Export</button>
+                    <button id="blacklist-import">Import</button>
+                </div>
+            </div>
+        </div>
+        <div id="blacklist" class="setup-box">
+            <div class="setup-section">
+                <div class="setup-section-header">
+                    <h1>Blacklist <span></span></h1>
+                    <span id="blacklist_refresh">Click on the game to remove it.</span>
+                </div>
+                <div class="setup-section-detail">
+                    <ul>
+                    </ul>
+                </div>
+                <div class="setup-clear-button"><a class="clear" name="blacklist">Clear</a></div>
+            </div>
+        </div>
+    </div>
+    <div style="clear: both;"></div>
+    <script type="text/javascript" charset="utf-8" src="lib/jquery.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="sg_lib.js"></script>
+    <script type="text/javascript" charset="utf-8" src="options.js"></script>
+</div>
+</body>
+</html>
