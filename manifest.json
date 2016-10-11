@@ -11,6 +11,7 @@
         "tabs", "storage", "https://www.steamgifts.com/*", "http://cdn.steampowered.com/*",
         "http://cdn.akamai.steamstatic.com/*", "https://steamcdn-a.akamaihd.net/*"
     ],
+    "homepage_url": "https://github.com/micso/easy-steamgifts",
 	"options_page": "options.html",
     "background": {
         "scripts": ["background.js"]

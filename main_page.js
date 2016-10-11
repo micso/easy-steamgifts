@@ -24,7 +24,7 @@ function getStorageType() {
 
 function getSyncStorage() {
     var options = ['hide_dlc', 'hide_high_level', 'updated_at', 'hide_blacklist',
-        'auto_pagination', 'forum_on_top', 'filter_points'];
+        'auto_pagination', 'forum_on_top', 'sticky_header', 'filter_points'];
 
     for (var i = 1; i <= st.maxTubes; i++) {
         options.push('wishlist' + i.toString());
@@ -41,6 +41,7 @@ function getSyncStorage() {
         storage.hideBlacklist = (typeof result.hide_blacklist == 'undefined' ? false : result.hide_blacklist);
         storage.autoPagination = (typeof result.auto_pagination == 'undefined' ? true : result.auto_pagination);
         storage.forumOnTop = (typeof result.forum_on_top == 'undefined' ? true : result.forum_on_top);
+        storage.stickyHeader = (typeof result.sticky_header == 'undefined' ? false : result.sticky_header);
         storage.blacklist = new Array();
         storage.wishlist = new Array();
         if (storage.st_blacklist == 's') {
@@ -64,6 +65,9 @@ function getSyncStorage() {
         if (storage.autoPagination && typeof vis.getUrlParameter('type') == 'undefined') {
             vis.addPageLoaderInfo();
             bindScroll();
+        }
+        if (storage.stickyHeader) {
+            vis.enableStickyHeader();
         }
     });
 }
@@ -103,7 +107,7 @@ function getLocalStorage() {
 }
 
 function sgRun() {
-    sg.addNews('Easy SteamGifts bugs now can be reported using github !');
+    sg.addNews('New cool feature! Sticky Header - see options page');
     sg.refreshStorage();
     sg.getGiveaways();
     getDlcList();
@@ -229,7 +233,6 @@ function updateStorage() {
 function updateMainPage() {
     vis.updateGiveawayListPage();
     vis.updateDonators();
-    //floating info
 }
 
 function addObservers() {

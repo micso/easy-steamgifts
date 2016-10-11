@@ -146,13 +146,3 @@ div.esg-win-chance {
 /*#esg-news .esg-donator { font-weight: bold; color: #ab100e !important; text-decoration: none; }*/
 /*#esg-news .esg-donator img { height: 14px; }*/
 .esg-steam-store-link { margin-right: 10px; }
-
-header {
-    position: fixed;
-    width: 100%;
-    z-index: 9999;
-}
-
-.featured__container {
-    padding-top: 39px;
-}
