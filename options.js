@@ -12,6 +12,7 @@ function saveOptions() {
     var checkbox3 = document.getElementById('hide_blacklist');
     var checkbox4 = document.getElementById('auto_pagination');
     var checkbox5 = document.getElementById('forum_on_top');
+    var checkbox6 = document.getElementById('sticky_header');
     var text1 = document.getElementById('join_comment');
     var text2 = document.getElementById('filter_points');
 
@@ -28,6 +29,7 @@ function saveOptions() {
         'hide_blacklist': checkbox3.checked,
         'auto_pagination': checkbox4.checked,
         'forum_on_top': checkbox5.checked,
+        'sticky_header': checkbox6.checked,
         'join_comment': text1.value,
         'filter_points': filterPoints
     });
@@ -87,7 +89,7 @@ function removeGameFromBlacklist() {
 
 function getSyncStorage() {
     var options = ['hide_dlc', 'hide_high_level', 'steam_id', 'steam_gift_user', 'hide_blacklist',
-        'auto_pagination', 'forum_on_top', 'join_comment', 'filter_points'];
+        'auto_pagination', 'forum_on_top', 'sticky_header', 'join_comment', 'filter_points'];
 
     for (var i = 1; i <= st.maxTubes; i++) {
         options.push('wishlist' + i.toString());
@@ -115,6 +117,7 @@ function getSyncStorage() {
         var steamGiftUser = (typeof result.steam_gift_user == 'undefined' ? null : result.steam_gift_user);
         var autoPagination = (typeof result.auto_pagination == 'undefined' ? true : result.auto_pagination);
         var forumOnTop = (typeof result.forum_on_top == 'undefined' ? true : result.forum_on_top);
+        var stickyHeader = (typeof result.sticky_header == 'undefined' ? false : result.sticky_header);
         var joinComment = (typeof result.join_comment == 'undefined' ? '' : result.join_comment);
         var filterPoints = (typeof result.filter_points == 'undefined' ? '' : result.filter_points);
 
@@ -123,6 +126,7 @@ function getSyncStorage() {
         document.getElementById('hide_blacklist').checked = hideBlacklist;
         document.getElementById('auto_pagination').checked = autoPagination;
         document.getElementById('forum_on_top').checked = forumOnTop;
+        document.getElementById('sticky_header').checked = stickyHeader;
         document.getElementById('join_comment').value = joinComment;
         document.getElementById('filter_points').value = filterPoints;
 

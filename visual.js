@@ -247,20 +247,20 @@ var vis = {
         });
     },
     updateDonators: function () {
-    var star = '<img src="' + chrome.extension.getURL("/img/star.gif") + '"/>';
-    var title = 'Easy Steam Gifts Donator';
-    $('.giveaway__username').each(function () {
-        var username = $(this).html();
-        if(sg.isDonator(username)) {
-            $(this).addClass('esg-donator').html(star + ' ' + username + ' ' + star).attr('title', title);
-        }
-    });
-    $('.comment__username > a').each(function () {
-        var username = $(this).html();
-        if(sg.isDonator(username)) {
-            $(this).addClass('esg-donator').html(star + ' ' + username + ' ' + star).attr('title', title);
-        }
-    });
+        var star = '<img src="' + chrome.extension.getURL("/img/star.gif") + '"/>';
+        var title = 'Easy Steam Gifts Donator';
+        $('.giveaway__username').each(function () {
+            var username = $(this).html();
+            if (sg.isDonator(username)) {
+                $(this).addClass('esg-donator').html(star + ' ' + username + ' ' + star).attr('title', title);
+            }
+        });
+        $('.comment__username > a').each(function () {
+            var username = $(this).html();
+            if (sg.isDonator(username)) {
+                $(this).addClass('esg-donator').html(star + ' ' + username + ' ' + star).attr('title', title);
+            }
+        });
     },
     canJoinGiveaway: function () {
         if ($('.sidebar__entry-delete').hasClass('is-hidden')) {
@@ -275,5 +275,9 @@ var vis = {
         } else {
             return true;
         }
+    },
+    enableStickyHeader: function () {
+        $('header').css({ "position": "fixed", "width": "100%", "z-index": "9999" });
+        $('.featured__container').css({"padding-top": "39px"});
     }
 }
