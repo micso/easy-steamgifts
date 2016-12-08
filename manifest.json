@@ -29,35 +29,35 @@
     },
     "content_scripts": [
         {
-            "matches": ["https://www.steamgifts.com/giveaway/*"],
+            "matches": ["*://www.steamgifts.com/giveaway/*"],
             "css": ["css/giveaway_page.css"],
             "js": ["lib/jquery.min.js"],
             "run_at": "document_start"
         },
         {
-            "matches": ["https://www.steamgifts.com/giveaway/*"],
+            "matches": ["*://www.steamgifts.com/giveaway/*"],
             "js": ["lib/jquery-textrange.js", "sg_lib.js", "visual.js", "giveaway_page.js"],
             "run_at": "document_end"
         },
         {
-            "matches": ["https://www.steamgifts.com/", "https://www.steamgifts.com/giveaways/search*"],
+            "matches": ["*://www.steamgifts.com/", "*://www.steamgifts.com/giveaways/search*"],
             "css": ["css/main_page.css"],
             "js": ["lib/jquery.min.js", "sg_lib.js", "visual.js", "main_page.js"],
             "run_at": "document_end"
         },
         {
-            "matches": ["http://steamcommunity.com/id/*/wishlist*", "http://steamcommunity.com/profiles/*/wishlist*"],
+            "matches": ["*://steamcommunity.com/id/*/wishlist*", "*://steamcommunity.com/profiles/*/wishlist*"],
             "js": ["lib/jquery.min.js", "sg_lib.js", "wishlist_page.js"],
             "run_at": "document_end"
         },
         {
-            "matches": ["https://www.steamgifts.com/user/*"],
+            "matches": ["*://www.steamgifts.com/user/*"],
             "css": ["css/profile_page.css"],
             "js": ["lib/jquery.min.js", "sg_lib.js", "visual.js", "profile_page.js"],
             "run_at": "document_end"
         },
         {
-            "matches": ["https://www.steamgifts.com/discussion/*"],
+            "matches": ["*://www.steamgifts.com/discussion/*"],
             "css": ["css/forum_page.css"],
             "js": ["lib/jquery.min.js", "lib/jquery-textrange.js", "visual.js", "forum_page.js"],
             "run_at": "document_end"
