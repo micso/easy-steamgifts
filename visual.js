@@ -131,6 +131,9 @@ var vis = {
                     if (sg.storage.filterPoints > giveaway.points) {
                         $(this).hide();
                     }
+                    if (sg.storage.filterPercentage > giveaway.chance.toFixed(3)) {
+                      $(this).hide();
+                    }
                     if (sg.findWishlistGame(giveaway.appId).result == true && vis.getUrlParameter('type') != 'wishlist') {
                         $(this).addClass('esg-on-wishlist');
                     }
