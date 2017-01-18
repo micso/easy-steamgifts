@@ -36,7 +36,7 @@ Professional UI plugin for steamgifts.com website
 ### Hide blacklisted games 
 ### Hide giveaways with too high contributor value 
 ### Filter by giveway level 
-### Filter by winning Percent
+### Filter by winning percent
 ### Sticky header
 
 ---
