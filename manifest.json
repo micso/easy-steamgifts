@@ -5,7 +5,7 @@
     "default_locale": "en",
     "author": "MeDAN",
     "manifest_version": 2,
-    "version": "2.5.1",
+    "version": "2.6.0",
     "minimum_chrome_version": "32.0",
     "permissions": [
         "tabs", "storage", "https://www.steamgifts.com/*", "http://cdn.steampowered.com/*",

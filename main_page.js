@@ -24,7 +24,7 @@ function getStorageType() {
 
 function getSyncStorage() {
     var options = ['hide_dlc', 'hide_high_level', 'updated_at', 'hide_blacklist',
-        'auto_pagination', 'forum_on_top', 'sticky_header', 'filter_points'];
+        'auto_pagination', 'forum_on_top', 'sticky_header', 'filter_points', 'filter_percentage'];
 
     for (var i = 1; i <= st.maxTubes; i++) {
         options.push('wishlist' + i.toString());
@@ -58,6 +58,7 @@ function getSyncStorage() {
         }
         storage.hideBlacklist = (typeof result.hide_blacklist == 'undefined' ? false : result.hide_blacklist);
         storage.filterPoints = (typeof result.filter_points == 'undefined' ? 0 : result.filter_points);
+        storage.filterPercentage = (typeof result.filter_percentage == 'undefined' ? 0 : result.filter_percentage);
         getLocalStorage();
         if (storage.forumOnTop) {
             vis.moveDiscussionToTop();

@@ -15,11 +15,17 @@ function saveOptions() {
     var checkbox6 = document.getElementById('sticky_header');
     var text1 = document.getElementById('join_comment');
     var text2 = document.getElementById('filter_points');
+    var text3 = document.getElementById('filter_percentage');
 
     /* Validation */
     var filterPoints = parseInt(text2.value);
     if (!isInteger(filterPoints) || filterPoints < 0) {
         filterPoints = 0;
+    }
+
+    var filterPercentage = parseFloat(text3.value);
+    if (!isFloat(filterPercentage) || filterPercentage < 0) {
+        filterPercentage = 0;
     }
 
     /* Save */
@@ -31,12 +37,17 @@ function saveOptions() {
         'forum_on_top': checkbox5.checked,
         'sticky_header': checkbox6.checked,
         'join_comment': text1.value,
-        'filter_points': filterPoints
+        'filter_points': filterPoints,
+        'filter_percentage': filterPercentage,
     });
 }
 
 function isInteger(x) {
     return (typeof x === 'number') && (x % 1 === 0);
+}
+
+function isFloat(x) {
+    return (typeof x === 'number') && (x % 1 !== 0);
 }
 
 function restoreOptions() {
@@ -89,7 +100,7 @@ function removeGameFromBlacklist() {
 
 function getSyncStorage() {
     var options = ['hide_dlc', 'hide_high_level', 'steam_id', 'steam_gift_user', 'hide_blacklist',
-        'auto_pagination', 'forum_on_top', 'sticky_header', 'join_comment', 'filter_points'];
+        'auto_pagination', 'forum_on_top', 'sticky_header', 'join_comment', 'filter_points', 'filter_percentage'];
 
     for (var i = 1; i <= st.maxTubes; i++) {
         options.push('wishlist' + i.toString());
@@ -120,6 +131,7 @@ function getSyncStorage() {
         var stickyHeader = (typeof result.sticky_header == 'undefined' ? false : result.sticky_header);
         var joinComment = (typeof result.join_comment == 'undefined' ? '' : result.join_comment);
         var filterPoints = (typeof result.filter_points == 'undefined' ? '' : result.filter_points);
+        var filterPercentage = (typeof result.filter_percentage == 'undefined' ? '' : result.filter_percentage);
 
         document.getElementById('hide_dlc').checked = hideDlc;
         document.getElementById('hide_high_level').checked = hideHighLevel;
@@ -129,6 +141,7 @@ function getSyncStorage() {
         document.getElementById('sticky_header').checked = stickyHeader;
         document.getElementById('join_comment').value = joinComment;
         document.getElementById('filter_points').value = filterPoints;
+        document.getElementById('filter_percentage').value = filterPercentage;
 
         var profileSpan = document.getElementById('profile_refresh');
         var wislistSpan = document.getElementById('wishlist_refresh');
