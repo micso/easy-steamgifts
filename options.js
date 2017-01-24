@@ -24,7 +24,7 @@ function saveOptions() {
     }
 
     var filterPercentage = parseFloat(text3.value);
-    if (!isFloat(filterPercentage) || filterPercentage < 0) {
+    if (!filterPercentage || filterPercentage < 0) {
         filterPercentage = 0;
     }
 
