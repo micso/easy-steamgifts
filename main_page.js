@@ -108,7 +108,7 @@ function getLocalStorage() {
 }
 
 function sgRun() {
-    sg.addNews('New cool feature! Sticky Header - see options page');
+    sg.addNews('Good luck in 2017 !');
     sg.refreshStorage();
     sg.getGiveaways();
     getDlcList();
@@ -118,7 +118,7 @@ function getDlcList() {
     dlcCheckIteration = 0;
 
     for (var i in sg.games) {
-        if (sg.games[i].data.appId === null) {
+        if (sg.games[i].data.appId === null || sg.games[i].data.image === null) {
             dlcCheckIteration = dlcCheckIteration + 1;
             if (dlcCheckIteration >= sg.appsCount) {
                 $(document).trigger('game_list_complete');
