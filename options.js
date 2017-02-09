@@ -16,6 +16,7 @@ function saveOptions() {
     var text1 = document.getElementById('join_comment');
     var text2 = document.getElementById('filter_points');
     var text3 = document.getElementById('filter_percentage');
+    var option1 = document.getElementById('filter_points_symbol');
 
     /* Validation */
     var filterPoints = parseInt(text2.value);
@@ -39,15 +40,12 @@ function saveOptions() {
         'join_comment': text1.value,
         'filter_points': filterPoints,
         'filter_percentage': filterPercentage,
+        'filter_points_symbol': option1.value
     });
 }
 
 function isInteger(x) {
     return (typeof x === 'number') && (x % 1 === 0);
-}
-
-function isFloat(x) {
-    return (typeof x === 'number') && (x % 1 !== 0);
 }
 
 function restoreOptions() {
@@ -100,7 +98,7 @@ function removeGameFromBlacklist() {
 
 function getSyncStorage() {
     var options = ['hide_dlc', 'hide_high_level', 'steam_id', 'steam_gift_user', 'hide_blacklist',
-        'auto_pagination', 'forum_on_top', 'sticky_header', 'join_comment', 'filter_points', 'filter_percentage'];
+        'auto_pagination', 'forum_on_top', 'sticky_header', 'join_comment', 'filter_points', 'filter_percentage', 'filter_points_symbol'];
 
     for (var i = 1; i <= st.maxTubes; i++) {
         options.push('wishlist' + i.toString());
@@ -132,6 +130,7 @@ function getSyncStorage() {
         var joinComment = (typeof result.join_comment == 'undefined' ? '' : result.join_comment);
         var filterPoints = (typeof result.filter_points == 'undefined' ? '' : result.filter_points);
         var filterPercentage = (typeof result.filter_percentage == 'undefined' ? '' : result.filter_percentage);
+        var filterPointsSymbol = (typeof result.filter_points_symbol == 'undefined' ? '' : result.filter_points_symbol);
 
         document.getElementById('hide_dlc').checked = hideDlc;
         document.getElementById('hide_high_level').checked = hideHighLevel;
@@ -142,6 +141,7 @@ function getSyncStorage() {
         document.getElementById('join_comment').value = joinComment;
         document.getElementById('filter_points').value = filterPoints;
         document.getElementById('filter_percentage').value = filterPercentage;
+        document.getElementById('filter_points_symbol').value = filterPointsSymbol;
 
         var profileSpan = document.getElementById('profile_refresh');
         var wislistSpan = document.getElementById('wishlist_refresh');

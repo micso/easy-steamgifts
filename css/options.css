@@ -26,6 +26,7 @@ li.disabled label { text-decoration: line-through; }
 .type-text .item-label, .type-select .item-label { margin-left: 25px; line-height: 25px; }
 .type-checkbox .item-field { width: 25px; }
 .item-field { float: left; }
+.item-field select { margin-right: 5px; }
 .item-label { float: left; font-weight: bold; }
 .item-comment { width: 100%; float: left; padding-left: 25px; font-style: italic; font-size: 11px; }
 

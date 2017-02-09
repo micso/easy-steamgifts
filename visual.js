@@ -128,7 +128,9 @@ var vis = {
                     if (sg.storage.hideHighLevel == true && giveaway.contributor.active && giveaway.contributor.achievable == false) {
                         $(this).hide();
                     }
-                    if (sg.storage.filterPoints > giveaway.points) {
+                    if (sg.storage.filterPointsSymbol == 1 && sg.storage.filterPoints >= giveaway.points) {
+                        $(this).hide();
+                    } else if (sg.storage.filterPointsSymbol == 2 && sg.storage.filterPoints < giveaway.points) {
                         $(this).hide();
                     }
                     if (sg.storage.filterPercentage > giveaway.chance.toFixed(3)) {
