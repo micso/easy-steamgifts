@@ -136,7 +136,7 @@ function checkIfGameIsDlc(i) {
         var xhr = new XMLHttpRequest();
         xhr.responseType = 'blob';
         var dlc = $.Deferred();
-        var url = sg.games[i].data.image;
+        var url = sg.games[i].data.image.prop("href");
         xhr.open("GET", url, true);
         xhr.onreadystatechange = function (e) {
             if (xhr.readyState == 4 && xhr.status == 200) {
