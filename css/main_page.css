@@ -8,7 +8,7 @@
     font: 700 16px "Open Sans",sans-serif;
     color: #ab100e;}
 
-.global__image-outer-wrap--game-medium { position: relative; }
+a.giveaway_image_thumbnail { position: relative; }
 
 div.esg-win-chance {
     font-weight: bold;
