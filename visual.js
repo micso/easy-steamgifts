@@ -37,8 +37,8 @@ var vis = {
     getGiveawayData: function (item) {
         var enableIncrement = true;
         var image = $('a.giveaway_image_thumbnail', item);
-		if ($('a.giveaway_image_thumbnail', item).length == 0) image = null;
-		else image.attr('style').replace('background-image:url(', '').replace(');', '');
+        if ($('a.giveaway_image_thumbnail', item).length == 0) image = null;
+        else image.attr('style').replace('background-image:url(', '').replace(');', '');
 
         if ($('.giveaway__heading > a.giveaway__icon', item).length) {
             var appId = parseInt($('.giveaway__heading > a.giveaway__icon', item).attr('href').match(/app\/[0-9]+|sub\/[0-9]+/)[0].replace('app/', '').replace('sub/', ''));
