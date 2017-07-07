@@ -5,7 +5,9 @@ var dlcCheckIteration = 0;
 var currentPage = vis.getCurrentPage();
 var nextPage = currentPage + 1;
 
-$(document).bind('game_list_complete', updateStorage);
+$(document).on('game_list_complete', updateStorage);
+// Ensure initial call succeeds
+$(document).ready(updateStorage);
 
 chrome.storage.sync.set({'steam_gift_user': sg.user});
 
