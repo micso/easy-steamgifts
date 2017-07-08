@@ -37,7 +37,7 @@ var vis = {
     getGiveawayData: function (item) {
         var enableIncrement = true;
         var image = $('a.giveaway_image_thumbnail', item);
-        if ($('a.giveaway_image_thumbnail', item).length == 0) image = null;
+        if ($('.giveaway_image_thumbnail,.giveaway_image_thumbnail_missing', item).length == 0) image = null;
         else image.attr('style').replace('background-image:url(', '').replace(');', '');
 
         if ($('.giveaway__heading > a.giveaway__icon', item).length) {
@@ -114,7 +114,7 @@ var vis = {
                     $('.giveaway__columns', this).prepend('<a href="javascript:void(0);" class="esg-bl-link"><div><i class="fa fa-plus-square"/> <span>eSG Blacklist</span></div></a>');
                     $('.giveaway__columns', this).prepend('<div class="esg-win-chance">' + giveaway.chance.toFixed(3) + '%</div>');
                     if (!giveaway.joined && giveaway.contributor.achievable && sg.points >= giveaway.points) {
-                        $('.giveaway_image_thumbnail', this).prepend('<div class="esg-join"><a href="javascript:void(0);" points="' + giveaway.points + '" joinHref="' + giveaway.href + '">Join</a></div>');
+                        $('.giveaway_image_thumbnail,.giveaway_image_thumbnail_missing', this).prepend('<div class="esg-join"><a href="javascript:void(0);" points="' + giveaway.points + '" joinHref="' + giveaway.href + '">Join</a></div>');
                     }
 
                     if (sg.storage.hideDlc == true) {
