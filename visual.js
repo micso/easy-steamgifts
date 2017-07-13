@@ -36,9 +36,10 @@ var vis = {
     },
     getGiveawayData: function (item) {
         var enableIncrement = true;
-        var image = $('a.giveaway_image_thumbnail', item);
-        if ($('.giveaway_image_thumbnail,.giveaway_image_thumbnail_missing', item).length == 0) image = null;
-        else image.attr('style').replace('background-image:url(', '').replace(');', '');
+        var image = $('a.giveaway_image_thumbnail,.giveaway_image_thumbnail_missing', item);
+        if (image.length == 0) image = null;
+        // What does this do?
+        //else image.attr('style').replace('background-image:url(', '').replace(');', '');
 
         if ($('.giveaway__heading > a.giveaway__icon', item).length) {
             var appId = parseInt($('.giveaway__heading > a.giveaway__icon', item).attr('href').match(/app\/[0-9]+|sub\/[0-9]+/)[0].replace('app/', '').replace('sub/', ''));
