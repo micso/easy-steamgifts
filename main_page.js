@@ -5,7 +5,9 @@ var dlcCheckIteration = 0;
 var currentPage = vis.getCurrentPage();
 var nextPage = currentPage + 1;
 
-$(document).bind('game_list_complete', updateStorage);
+$(document).on('game_list_complete', updateStorage);
+// Ensure initial call succeeds
+$(document).ready(updateStorage);
 
 chrome.storage.sync.set({'steam_gift_user': sg.user});
 
@@ -136,7 +138,7 @@ function checkIfGameIsDlc(i) {
         var xhr = new XMLHttpRequest();
         xhr.responseType = 'blob';
         var dlc = $.Deferred();
-        var url = sg.games[i].data.image;
+        var url = sg.games[i].data.image.prop("href");
         xhr.open("GET", url, true);
         xhr.onreadystatechange = function (e) {
             if (xhr.readyState == 4 && xhr.status == 200) {
