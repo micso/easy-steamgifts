@@ -1,3 +1,5 @@
+# The project will not be updated anymore
+
 <a target="_blank" href="https://chrome.google.com/webstore/detail/easy-steamgifts/cklbilaeedbblhpkhjfcnmaocjdodcnm">![Try it now in CWS](https://raw.github.com/GoogleChrome/chrome-app-samples/master/tryitnowbutton.png "Click here to install extension from the Chrome Web Store")</a>
 
 # Easy SteamGifts
